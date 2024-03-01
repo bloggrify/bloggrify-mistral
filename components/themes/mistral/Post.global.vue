@@ -52,16 +52,16 @@
     </main>
 </template>
 <script setup lang="ts">
-import ArticleHeader from "~/components/themes/default/ArticleHeader.vue";
-import SharingButtons from "~/components/themes/default/SharingButtons.vue";
-import PageSidebar from "~/components/themes/default/PageSidebar.vue";
+import ArticleHeader from "~/components/themes/mistral/ArticleHeader.vue";
+import SharingButtons from "~/components/themes/mistral/SharingButtons.vue";
+import PageSidebar from "~/components/themes/mistral/PageSidebar.vue";
 const props = defineProps<{
     doc: any;
 }>();
 
 const config = useAppConfig();
 
-const postLink = useRequestURL();
+const postLink = useRequestURL().toString();
 
 const isTocEnabled =
     props.doc?.body?.toc?.links.length &&

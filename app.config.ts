@@ -1,6 +1,8 @@
 export default defineAppConfig({
     logo: "/images/logo.svg",
 
+    url: "https://bloggr-mistral.eventuallycoding.com/",
+
     theme: "mistral",
 
     // If you only have one author, you can set the author here

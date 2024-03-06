@@ -43,7 +43,10 @@
                     {{ article.readingTime.text }}
                 </p>
             </div>
-            <div class="flex items-center font-medium sm:mx-3 justify-center">
+            <div
+                v-if="author"
+                class="flex items-center font-medium sm:mx-3 justify-center"
+            >
                 <NuxtImg
                     :src="author.avatar"
                     loading="lazy"

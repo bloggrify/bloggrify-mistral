@@ -18,7 +18,7 @@ export default defineNuxtConfig({
         },
     },
 
-    extends: ["github:hlassiege/bloggr#1.0.0"],
+    extends: ["../bloggr"],
 
-    assets: ["~/assets/css/mistral.scss"],
+    css: ["~/assets/css/mistral.scss"],
 });

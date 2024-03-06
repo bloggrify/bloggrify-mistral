@@ -1,4 +1,5 @@
 <template>
+    <Header />
     <main>
         <div v-if="doc">
             <div
@@ -26,7 +27,6 @@
                             :class="isTocEnabled ? 'lg:w-3/4 ' : ''"
                         >
                             <ContentRenderer
-                                id="nuxtContent"
                                 :value="doc"
                                 class="prose text-sm md:text-xl min-w-full md:p-10 mx-auto"
                             />
@@ -42,19 +42,19 @@
                     :author-id="doc.author"
                 />
 
-                <hyvor-talk-comments
-                    v-if="config.comments.enabled"
-                    :website-id="config.comments.hyvor_talk.website_id"
-                    :page-id="doc.id"
-                ></hyvor-talk-comments>
+                <CommentSystem :id="doc.id" :nocomments="doc.nocomments" />
             </div>
         </div>
     </main>
+    <Footer />
 </template>
 <script setup lang="ts">
+import Header from "~/components/themes/mistral/Header.vue";
+import Footer from "~/components/themes/mistral/Footer.vue";
 import ArticleHeader from "~/components/themes/mistral/ArticleHeader.vue";
 import SharingButtons from "~/components/themes/mistral/SharingButtons.vue";
 import PageSidebar from "~/components/themes/mistral/PageSidebar.vue";
+
 const props = defineProps<{
     doc: any;
 }>();

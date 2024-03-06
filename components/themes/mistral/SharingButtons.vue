@@ -36,14 +36,7 @@
             </div>
             <div>
                 <a
-                    :href="
-                        'https://twitter.com/share?url=' +
-                        postLink +
-                        '&text=' +
-                        title +
-                        '&via=' +
-                        author.socials.twitter_username
-                    "
+                    :href="shareUrlOnTwitter"
                     target="_blank"
                     title="Share on Twitter"
                     rel="noopener noreferrer"
@@ -83,4 +76,5 @@ const props = defineProps<{
 }>();
 
 const author = findAuthor(props.authorId);
+const shareUrlOnTwitter = `https://twitter.com/share?url=${props.postLink}&text=${props.title}&via=${author?.socials?.twitter_username}`;
 </script>

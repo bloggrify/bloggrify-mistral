@@ -19,6 +19,4 @@ export default defineNuxtConfig({
     },
 
     extends: ["../bloggr"],
-
-    css: ["~/assets/css/mistral.scss"],
 });

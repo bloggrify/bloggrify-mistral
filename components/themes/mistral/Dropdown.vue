@@ -3,7 +3,6 @@
         <div>
             <span class="rounded-md shadow-sm">
                 <button
-                    v-click-outside="onClickOutside"
                     type="button"
                     class="inline-flex justify-center w-full rounded-md border border-gray-300 px-4 py-2 bg-white text-sm leading-5 font-medium text-black hover:text-gray-500 hover:bg-smalt-blue-500 focus:outline-none transition ease-in-out duration-150"
                     aria-haspopup="true"
@@ -61,24 +60,6 @@
     </div>
 </template>
 
-<script>
-import vClickOutside from "v-click-outside";
-
-export default {
-    directives: {
-        clickOutside: vClickOutside.directive,
-    },
-    data() {
-        return {
-            showOptions: false,
-        };
-    },
-    methods: {
-        onClickOutside(event) {
-            this.showOptions = false;
-        },
-    },
-};
+<script setup lang="ts">
+const showOptions = ref(false);
 </script>
-
-<style></style>

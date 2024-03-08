@@ -70,11 +70,11 @@
 </template>
 <script setup lang="ts">
 const props = defineProps<{
-    postLink: string;
     title: string;
     authorId: string | undefined;
 }>();
 
+const postLink = useRequestURL().toString();
 const author = findAuthor(props.authorId);
-const shareUrlOnTwitter = `https://twitter.com/share?url=${props.postLink}&text=${props.title}&via=${author?.socials?.twitter_username}`;
+const shareUrlOnTwitter = `https://twitter.com/share?url=${postLink}&text=${props.title}&via=${author?.socials?.twitter_username}`;
 </script>

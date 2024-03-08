@@ -36,11 +36,7 @@
 
                 <hr class="mb-8" />
 
-                <SharingButtons
-                    :title="doc.title"
-                    :post-link="postLink"
-                    :author-id="doc.author"
-                />
+                <SharingButtons :title="doc.title" :author-id="doc.author" />
 
                 <CommentSystem :id="doc.id" :nocomments="doc.nocomments" />
             </div>
@@ -60,8 +56,6 @@ const props = defineProps<{
 }>();
 
 const config = useAppConfig();
-
-const postLink = useRequestURL().toString();
 
 const isTocEnabled =
     props.doc?.body?.toc?.links.length &&

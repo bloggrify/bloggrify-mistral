@@ -67,7 +67,7 @@
 <script setup lang="ts">
 const query = {
     path: "",
-    where: [{ listed: { $ne: false } }],
+    where: [{ hidden: { $ne: true }, listed: { $ne: false } }],
     limit: 10,
     sort: [{ date: -1 }],
 };

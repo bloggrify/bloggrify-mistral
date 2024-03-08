@@ -32,7 +32,7 @@
 <script setup lang="ts">
 const query = {
     path: "",
-    where: [{ listed: { $ne: false } }],
+    where: [{ hidden: { $ne: true }, listed: { $ne: false } }],
     sort: [{ date: -1 }],
 };
 

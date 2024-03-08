@@ -18,5 +18,5 @@ export default defineNuxtConfig({
         },
     },
 
-    extends: ["github:hlassiege/bloggr#theming-v2"],
+    extends: ["github:hlassiege/bloggr#main"],
 });

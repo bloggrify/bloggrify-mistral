@@ -1,13 +1,13 @@
 export default defineAppConfig({
     logo: "/images/logo.svg",
 
-    url: "https://bloggr-mistral.eventuallycoding.com/",
+    url: "https://mistral.bloggrify.com/",
 
     theme: "mistral",
 
     // If you only have one author, you can set the author here
     // It will be used as the default author for all posts AND as the general logo/description/socials for the website
-    name: "Bloggr",
+    name: "Bloggrify",
     avatar: "/images/avatar.jpg",
     description:
         "lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",

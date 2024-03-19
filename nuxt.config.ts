@@ -18,5 +18,5 @@ export default defineNuxtConfig({
         },
     },
 
-    extends: ["github:hlassiege/bloggr#main"],
+    extends: ["github:hlassiege/bloggrify#main"],
 });

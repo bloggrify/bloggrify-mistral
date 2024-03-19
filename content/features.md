@@ -1,7 +1,7 @@
 ---
 id: "11"
 title: "All features"
-description: "Discover all the features of Bloggr."
+description: "Discover all the features of Bloggrify."
 date: "2024-02-11"
 cover: "covers/tokyo.jpg"
 table_of_contents: true
@@ -10,7 +10,7 @@ listed: false
 
 ## Introduction
 
-Bloggr is built on top of
+Bloggrify is built on top of
 * [Nuxt.js 3.x](https://nuxt.com/)
 * [Tailwind CSS](https://tailwindcss.com/)
 * [Nuxt-Content](https://content.nuxt.com/)
@@ -52,7 +52,7 @@ You can read more about it [here](/markdown).
 
 ## SEO friendly
 
-Bloggr is SEO friendly. It generates a sitemap and a RSS feed. It also supports Open Graph and Twitter cards. It has been optimized for search engines.  
+Bloggrify is SEO friendly. It generates a sitemap and a RSS feed. It also supports Open Graph and Twitter cards. It has been optimized for search engines.  
 
 ### Choose your language
 

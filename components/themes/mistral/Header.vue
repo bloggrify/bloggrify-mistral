@@ -80,7 +80,7 @@
                                         :src="config.logo"
                                         class="h-10 rounded-full mr-2"
                                         alt="logo"
-                                    />
+                                    >
                                     <nuxt-link class="text-3xl" to="/">{{
                                         blogName
                                     }}</nuxt-link>
@@ -91,12 +91,14 @@
                             class="hidden sm:block sm:ml-6 absolute right-0 font-mark"
                         >
                             <div class="flex space-x-4">
+                                <AppSearch />
                                 <NuxtLink
                                     v-for="item in menu"
                                     :key="item.path"
                                     :to="item.path"
                                     class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium font-to-invert-to-black"
-                                    >{{ item.name }}
+                                >
+                                    {{ item.name }}
                                 </NuxtLink>
                                 <NuxtLink
                                     title="Subscribe to RSS feed"
@@ -105,9 +107,8 @@
                                     rel="me"
                                     target="_blank"
                                     to="/rss.xml"
-                                    ><span class="sr-only"
-                                        >Subscribe to RSS feed</span
-                                    >
+                                >
+                                    <span class="sr-only">Subscribe to RSS feed</span>
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 448 512"
@@ -128,12 +129,14 @@
             <!-- Mobile menu, show/hide based on menu state. -->
             <div :class="mobileMenuOpen ? '' : 'hidden'">
                 <div class="px-2 pt-2 pb-3 space-y-1">
+                    <AppSearch />
                     <NuxtLink
                         v-for="item in menu"
                         :key="item.path"
                         :to="item.path"
                         class="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium font-to-invert-to-black"
-                        >{{ item.name }}
+                    >
+                        {{ item.name }}
                     </NuxtLink>
                     <NuxtLink
                         title="Subscribe to RSS feed"
@@ -142,7 +145,8 @@
                         rel="me"
                         target="_blank"
                         to="/rss.xml"
-                        ><span class="sr-only">Subscribe to RSS feed</span>
+                    >
+                        <span class="sr-only">Subscribe to RSS feed</span>
 
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -162,11 +166,11 @@
 </template>
 
 <script setup lang="ts">
-const config = useAppConfig();
-const menu = config.menu;
-const blogName = config.name;
+const config = useAppConfig()
+const menu = config.menu
+const blogName = config.name
 
-const mobileMenuOpen = ref(false);
+const mobileMenuOpen = ref(false)
 </script>
 
 <style lang="scss" scoped>

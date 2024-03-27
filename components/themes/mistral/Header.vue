@@ -1,6 +1,6 @@
 <template>
     <header
-        class="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-4 dark:bg-gray-800 border"
+        class="flex flex-wrap sm:justify-start sm:flex-nowrap z-11 w-full bg-white text-sm py-4 dark:bg-gray-800 border"
     >
         <nav
             class="transition-colors bg-gray-50 fixed w-full z-10 top-0 inverted border-b border-gray-200"

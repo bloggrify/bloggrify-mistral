@@ -6,17 +6,15 @@ export default defineNuxtConfig({
                 ...(process.env.PIRSCH_CODE
                     ? [
                         {
-                            src: "https://api.pirsch.io/pirsch.js",
-                            id: "pirschjs",
+                            src: 'https://api.pirsch.io/pirsch.js',
+                            id: 'pirschjs',
                             defer: true,
-                            "data-code": process.env.PIRSCH_CODE,
-                            type: "text/javascript",
+                            'data-code': process.env.PIRSCH_CODE,
+                            type: 'text/javascript',
                         },
                     ]
                     : []),
             ],
         },
     },
-
-    extends: ["github:hlassiege/bloggrify#main"],
-});
+})

@@ -23,8 +23,7 @@
                                     {{ desc(article) }}
                                 </p>
                                 <div class="mb-3">
-                                    <span class="text-sm text-gray-500"
-                                        >{{ formatDate(article.date) }}
+                                    <span class="text-sm text-gray-500">{{ formatDate(article.date) }}
                                         ∙
                                     </span>
                                     <span class="text-sm text-gray-500">{{
@@ -37,8 +36,7 @@
                                     v-for="tag in article.tags"
                                     :key="tag"
                                     class="bg-gray-200 rounded-full px-3 py-1 text-sm text-gray-700"
-                                    >{{ tag }}</span
-                                >
+                                >{{ tag }}</span>
                             </div>
                         </div>
                         <div
@@ -58,7 +56,13 @@
                             </NuxtLink>
                         </div>
                     </div>
-                    <hr />
+                    <hr>
+                </div>
+
+                <div class="flex items-center justify-center mt-10">
+                    <NuxtLink to="/archives" class="mt-2 bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded">
+                        View all posts
+                    </NuxtLink>
                 </div>
             </div>
         </template>
@@ -66,16 +70,16 @@
 </template>
 <script setup lang="ts">
 const query = {
-    path: "",
+    path: '',
     where: [{ hidden: { $ne: true }, listed: { $ne: false } }],
     limit: 10,
     sort: [{ date: -1 }],
-};
+}
 
 function desc(article: any): string {
     return (
-        article.description.slice(0, 200) + "..." ||
-        article.body.slice(0, 200) + "..."
-    );
+        article.description.slice(0, 200) + '...' ||
+        article.body.slice(0, 200) + '...'
+    )
 }
 </script>

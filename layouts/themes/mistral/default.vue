@@ -34,9 +34,9 @@
                     </div>
                 </div>
 
-                <hr class="mb-8" />
+                <hr class="mb-8">
 
-                <SharingButtons :title="doc.title" :author-id="doc.author" />
+                <ShareSection :title="doc.title" :image="doc.cover" />
 
                 <CommentSystem :id="doc.id" :nocomments="doc.nocomments" />
             </div>
@@ -45,20 +45,20 @@
     <Footer />
 </template>
 <script setup lang="ts">
-import Header from "~/components/themes/mistral/Header.vue";
-import Footer from "~/components/themes/mistral/Footer.vue";
-import ArticleHeader from "~/components/themes/mistral/ArticleHeader.vue";
-import SharingButtons from "~/components/themes/mistral/SharingButtons.vue";
-import PageSidebar from "~/components/themes/mistral/PageSidebar.vue";
+import Header from '~/components/themes/mistral/Header.vue'
+import Footer from '~/components/themes/mistral/Footer.vue'
+import ArticleHeader from '~/components/themes/mistral/ArticleHeader.vue'
+import ShareSection from '~/components/themes/mistral/ShareSection.vue'
+import PageSidebar from '~/components/themes/mistral/PageSidebar.vue'
 
 const props = defineProps<{
     doc: any;
-}>();
+}>()
 
-const config = useAppConfig();
+const config = useAppConfig()
 
 const isTocEnabled =
     props.doc?.body?.toc?.links.length &&
     props.doc?.body.toc?.links.length > 0 &&
-    (config.table_of_contents || props.doc?.table_of_contents);
+    (config.table_of_contents || props.doc?.table_of_contents)
 </script>

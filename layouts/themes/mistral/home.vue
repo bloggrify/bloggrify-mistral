@@ -1,6 +1,13 @@
 <template>
     <Header />
-    <ContentRenderer :value="doc" />
+    <MistralHomeLayout>
+        <template #posts>
+            <MistralLimitedListOfPosts />
+        </template>
+        <template #sidebar>
+            <MistralSideAuthorCard />
+        </template>
+    </MistralHomeLayout>
     <Footer />
 </template>
 <script setup lang="ts">

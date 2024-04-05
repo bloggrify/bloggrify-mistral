@@ -36,7 +36,7 @@
 
                 <hr class="mb-8">
 
-                <ShareSection :title="doc.title" :image="doc.cover" />
+                <ShareSection :title="doc.title" :cover="doc.cover" />
 
                 <CommentSystem :id="doc.id" :nocomments="doc.nocomments" />
             </div>

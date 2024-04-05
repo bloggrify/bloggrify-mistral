@@ -60,7 +60,7 @@
                 </div>
 
                 <div class="flex items-center justify-center mt-10">
-                    <NuxtLink to="/archives" class="mt-2 bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded">
+                    <NuxtLink to="/archives" class="mt-2 bg-black hover:bg-slate-800 text-white font-semibold py-2 px-4 rounded">
                         View all posts
                     </NuxtLink>
                 </div>

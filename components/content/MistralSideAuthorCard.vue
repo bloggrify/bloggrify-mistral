@@ -1,11 +1,13 @@
 <template>
-    <NuxtImg
-        :src="config.avatar"
-        :alt="config.name"
-        class="rounded-full border border-gray-300"
-        width="100"
-        height="100"
-    />
+    <div class="w-[110px] h-[110px] border border-gray-300 rounded-full flex items-center justify-center p-1">
+        <NuxtImg
+            :src="config.avatar"
+            :alt="config.name"
+            class="rounded-full border border-gray-300"
+            width="100"
+            height="100"
+        />
+    </div>
     <div class="font-semibold text-xl mt-2">
         {{ config.name }}
     </div>
@@ -21,7 +23,8 @@
                 target="_blank"
                 rel="me"
                 :to="config.socials.youtube"
-                ><span class="sr-only">Youtube</span>
+            >
+                <span class="sr-only">Youtube</span>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 576 512"
@@ -40,7 +43,8 @@
                 rel="me"
                 target="_blank"
                 :to="config.socials.mastodon"
-                ><span class="sr-only">Mastodon</span>
+            >
+                <span class="sr-only">Mastodon</span>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 448 512"
@@ -59,7 +63,8 @@
                 target="_blank"
                 rel="nofollow noopener noreferrer"
                 :to="config.socials.github"
-                ><span class="sr-only">github</span>
+            >
+                <span class="sr-only">github</span>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 496 512"
@@ -78,7 +83,8 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 :to="config.socials.facebook"
-                ><span class="sr-only">Facebook</span>
+            >
+                <span class="sr-only">Facebook</span>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="transition-transform hover:scale-110 w-6 h-6"
@@ -97,7 +103,8 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 :to="config.socials.linkedin"
-                ><span class="sr-only">Linkedin</span>
+            >
+                <span class="sr-only">Linkedin</span>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 448 512"
@@ -132,5 +139,5 @@
     </div>
 </template>
 <script setup lang="ts">
-const config = useAppConfig();
+const config = useAppConfig()
 </script>

@@ -5,20 +5,25 @@
             :class="newsletterEnabled ? 'md:grid-cols-3' : 'md:grid-cols-2'"
         >
             <div>
-                <h3 class="font-bold text-lg mb-4">Menu</h3>
+                <h3 class="font-bold text-lg mb-4">
+                    Menu
+                </h3>
                 <ul>
                     <li v-for="item in menu" :key="item.path">
                         <NuxtLink
                             :key="item.path"
                             :to="item.path"
                             class="hover:text-gray-400"
-                            >{{ item.name }}
+                        >
+                            {{ item.name }}
                         </NuxtLink>
                     </li>
                 </ul>
             </div>
             <div>
-                <h3 class="font-bold text-lg mb-4">Follow</h3>
+                <h3 class="font-bold text-lg mb-4">
+                    Follow
+                </h3>
                 <div class="flex flex-col items-start mt-6">
                     <div class="flex mb-3 space-x-4">
                         <NuxtLink
@@ -28,7 +33,8 @@
                             target="_blank"
                             rel="me"
                             :to="config.socials.youtube"
-                            ><span class="sr-only">Youtube</span>
+                        >
+                            <span class="sr-only">Youtube</span>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 576 512"
@@ -47,7 +53,8 @@
                             target="_blank"
                             rel="me"
                             :to="config.socials.mastodon"
-                            ><span class="sr-only">Mastodon</span>
+                        >
+                            <span class="sr-only">Mastodon</span>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 448 512"
@@ -66,7 +73,8 @@
                             target="_blank"
                             rel="nofollow noopener noreferrer"
                             :to="config.socials.github"
-                            ><span class="sr-only">github</span>
+                        >
+                            <span class="sr-only">github</span>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 496 512"
@@ -85,7 +93,8 @@
                             target="_blank"
                             rel="noopener noreferrer"
                             :to="config.socials.facebook"
-                            ><span class="sr-only">Facebook</span>
+                        >
+                            <span class="sr-only">Facebook</span>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 class="transition-transform hover:scale-110 w-6 h-6"
@@ -104,7 +113,8 @@
                             target="_blank"
                             rel="noopener noreferrer"
                             :to="config.socials.linkedin"
-                            ><span class="sr-only">Linkedin</span>
+                        >
+                            <span class="sr-only">Linkedin</span>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 448 512"
@@ -139,8 +149,12 @@
                 </div>
             </div>
             <div v-if="newsletterEnabled">
-                <h3 class="font-bold text-lg mb-4">Subscribe</h3>
-                <p class="mb-4">Subscribe to get the latest posts by email.</p>
+                <h3 class="font-bold text-lg mb-4">
+                    Subscribe
+                </h3>
+                <p class="mb-4">
+                    Subscribe to get the latest posts by email.
+                </p>
                 <p v-if="error" class="text-red-500 text-xs italic mb-2">
                     Subscription failed. Please retry later
                 </p>
@@ -157,11 +171,11 @@
                         placeholder="Your email"
                         class="p-2 text-gray-700 w-full"
                         required
-                    />
-                    <input type="hidden" name="ml-submit" value="1" />
-                    <input type="hidden" name="anticsrf" value="true" />
+                    >
+                    <input type="hidden" name="ml-submit" value="1">
+                    <input type="hidden" name="anticsrf" value="true">
                     <button
-                        class="mt-2 w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                        class="mt-2 w-full bg-black hover:bg-slate-700 text-white font-bold py-2 px-4 rounded"
                         @click.prevent="subscribe"
                     >
                         Subscribe
@@ -184,29 +198,29 @@
 </template>
 
 <script setup lang="ts">
-const config = useAppConfig();
-const menu = config.menu;
-const newsletterEnabled = config.newsletter.enabled;
-const formAction = config.newsletter.form_action;
-const email = ref("");
-const success = ref(false);
-const error = ref(false);
+const config = useAppConfig()
+const menu = config.menu
+const newsletterEnabled = config.newsletter.enabled
+const formAction = config.newsletter.form_action
+const email = ref('')
+const success = ref(false)
+const error = ref(false)
 
 async function subscribe() {
-    const formData = new FormData();
-    formData.append("fields[email]", email.value);
-    formData.append("ml-submit", "1");
-    formData.append("anticsrf", "true");
+    const formData = new FormData()
+    formData.append('fields[email]', email.value)
+    formData.append('ml-submit', '1')
+    formData.append('anticsrf', 'true')
     const response = await fetch(formAction, {
-        method: "POST",
+        method: 'POST',
         body: formData,
-    });
-    email.value = "";
+    })
+    email.value = ''
 
     if (response.ok) {
-        success.value = true;
+        success.value = true
     } else {
-        error.value = true;
+        error.value = true
     }
 }
 </script>

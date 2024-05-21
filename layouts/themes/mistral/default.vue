@@ -35,6 +35,12 @@
                     </div>
                 </div>
 
+                <div class="flex items-center justify-center mb-6">
+                    <NuxtLink v-for="tag in doc.tags" :key="tag" :to="`/tags/${tag}`" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mx-2">
+                        {{ tag }}
+                    </NuxtLink>
+                </div>
+
                 <hr class="mb-8">
 
                 <ShareSection :title="doc.title" :cover="doc.cover" />

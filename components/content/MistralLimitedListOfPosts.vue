@@ -32,11 +32,14 @@
                                 </div>
                             </NuxtLink>
                             <div class="flex flex-wrap gap-2">
-                                <span
+                                <NuxtLink
                                     v-for="tag in article.tags"
                                     :key="tag"
-                                    class="bg-gray-200 rounded-full px-3 py-1 text-sm text-gray-700"
-                                >{{ tag }}</span>
+                                    class="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700"
+                                    :to="`/tags/${tag}`"
+                                >
+                                    {{ tag }}
+                                </NuxtLink>
                             </div>
                         </div>
                         <div

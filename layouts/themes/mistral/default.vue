@@ -54,6 +54,11 @@ import PageSidebar from '~/components/themes/mistral/PageSidebar.vue'
 
 const props = defineProps<{
     doc: any;
+    docs: any;
+    currentPage: number;
+    total: number;
+    category: string;
+    tag: string;
 }>()
 
 const config = useAppConfig()

@@ -27,6 +27,7 @@
                             :class="isTocEnabled ? 'lg:w-3/4 ' : ''"
                         >
                             <ContentRenderer
+                                id="nuxtContent"
                                 :value="doc"
                                 class="prose text-sm md:text-xl min-w-full md:p-10 mx-auto"
                             />

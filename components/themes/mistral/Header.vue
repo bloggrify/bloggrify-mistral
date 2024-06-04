@@ -75,12 +75,12 @@
                                 class="text-base font-medium text-gray-700 hover:text-gray-900"
                             >
                                 <div class="flex">
-                                    <img
+                                    <NuxtImg
                                         v-if="config.logo"
                                         :src="config.logo"
                                         class="h-10 rounded-full mr-2"
                                         alt="logo"
-                                    >
+                                    />
                                     <nuxt-link class="text-3xl" to="/">{{
                                         blogName
                                     }}</nuxt-link>

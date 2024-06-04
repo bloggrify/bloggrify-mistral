@@ -1,28 +1,28 @@
 <template>
     <div class="w-[110px] h-[110px] border border-gray-300 rounded-full flex items-center justify-center p-1">
         <NuxtImg
-            :src="config.avatar"
-            :alt="config.name"
+            :src="author.avatar"
+            :alt="author.name"
             class="rounded-full border border-gray-300"
             width="100"
             height="100"
         />
     </div>
     <div class="font-semibold text-xl mt-2">
-        {{ config.name }}
+        {{ author.name }}
     </div>
     <div class="text-gray-500 text-sm mt-2">
-        {{ config.description }}
+        {{ author.description }}
     </div>
     <div class="mt-4">
         <div class="flex mb-3 space-x-4">
             <NuxtLink
-                v-if="config.socials.youtube"
+                v-if="author.socials.youtube"
                 aria-label="Open Youtube profile"
                 class="text-sm text-gray-500 transition hover:text-gray-600"
                 target="_blank"
                 rel="me"
-                :to="config.socials.youtube"
+                :to="author.socials.youtube"
             >
                 <span class="sr-only">Youtube</span>
                 <svg
@@ -37,12 +37,12 @@
                 </svg>
             </NuxtLink>
             <NuxtLink
-                v-if="config.socials.mastodon"
+                v-if="author.socials.mastodon"
                 aria-label="Open Mastodon profile"
                 class="text-sm text-gray-500 transition hover:text-gray-600"
                 rel="me"
                 target="_blank"
-                :to="config.socials.mastodon"
+                :to="author.socials.mastodon"
             >
                 <span class="sr-only">Mastodon</span>
                 <svg
@@ -57,12 +57,12 @@
                 </svg>
             </NuxtLink>
             <NuxtLink
-                v-if="config.socials.github"
+                v-if="author.socials.github"
                 aria-label="Open github profile"
                 class="text-sm text-gray-500 transition hover:text-gray-600"
                 target="_blank"
                 rel="nofollow noopener noreferrer"
-                :to="config.socials.github"
+                :to="author.socials.github"
             >
                 <span class="sr-only">github</span>
                 <svg
@@ -77,12 +77,12 @@
                 </svg>
             </NuxtLink>
             <NuxtLink
-                v-if="config.socials.facebook"
+                v-if="author.socials.facebook"
                 aria-label="Open Facebook profile"
                 class="text-sm text-gray-500 transition hover:text-gray-600"
                 target="_blank"
                 rel="noopener noreferrer"
-                :to="config.socials.facebook"
+                :to="author.socials.facebook"
             >
                 <span class="sr-only">Facebook</span>
                 <svg
@@ -97,12 +97,12 @@
                 </svg>
             </NuxtLink>
             <NuxtLink
-                v-if="config.socials.linkedin"
+                v-if="author.socials.linkedin"
                 aria-label="Open linkedin profile"
                 class="text-sm text-gray-500 transition hover:text-gray-600"
                 target="_blank"
                 rel="noopener noreferrer"
-                :to="config.socials.linkedin"
+                :to="author.socials.linkedin"
             >
                 <span class="sr-only">Linkedin</span>
                 <svg
@@ -117,11 +117,11 @@
                 </svg>
             </NuxtLink>
             <NuxtLink
-                v-if="config.socials.twitter"
+                v-if="author.socials.twitter"
                 aria-label="Open twitter profile"
                 target="_blank"
                 rel="nofollow noopener noreferrer"
-                :to="config.socials.twitter"
+                :to="author.socials.twitter"
                 class="text-gray-500 transition hover:text-gray-600"
             >
                 <svg
@@ -139,5 +139,10 @@
     </div>
 </template>
 <script setup lang="ts">
+import {findAuthor} from '#imports'
+
 const config = useAppConfig()
+
+const author = findAuthor()
+
 </script>

@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v1.2.0
+
+[compare changes](https://github.com/hlassiege/bloggrify-mistral/compare/v1.1.0...v1.2.0)
+
+### 🚀 Enhancements
+
+- On the side card, use the author configuration instead of the blog configuration ([f892fc6](https://github.com/hlassiege/bloggrify-mistral/commit/f892fc6))
+
+### 🩹 Fixes
+
+- Use NuxtImg instead of img ([f3f26ff](https://github.com/hlassiege/bloggrify-mistral/commit/f3f26ff))
+
+### ❤️ Contributors
+
+- Hlassiege <hlassiege@gmail.com>
+
 ## v1.1.0
 
 

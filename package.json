@@ -8,7 +8,7 @@
     "main": "./nuxt.config.ts",
     "repository": {
         "type": "git",
-        "url": "https://github.com/hlassiege/bloggrify-mistral.git"
+        "url": "https://github.com/bloggrify/bloggrify-mistral.git"
     },
     "files": [
         "components",
@@ -26,7 +26,7 @@
         "lint": "eslint ."
     },
     "dependencies": {
-        "@bloggrify/core": "1.2.1",
+        "@bloggrify/core": "1.3.0",
         "nuxt": "3.11.2"
     },
     "devDependencies": {

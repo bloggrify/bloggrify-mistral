@@ -190,7 +190,7 @@
                 &nbsp;{{ config.name }}
                 <div>•</div>
                 &nbsp; Powered by
-                <a href="https://github.com/hlassiege/bloggrify">Bloggrify</a>
+                <a href="https://github.com/bloggrify/bloggrify">Bloggrify</a>
             </div>
         </div>
     </footer>

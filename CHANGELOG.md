@@ -1,6 +1,25 @@
 # Changelog
 
 
+## v1.2.1
+
+[compare changes](https://github.com/bloggrify/bloggrify-mistral/compare/v1.2.0...v1.2.1)
+
+### 🩹 Fixes
+
+- Archive template didn't follow the convention ([7750665](https://github.com/bloggrify/bloggrify-mistral/commit/7750665))
+
+### 🏡 Chore
+
+- Transfer repository to bloggrify ([da10e5d](https://github.com/bloggrify/bloggrify-mistral/commit/da10e5d))
+- Upgrade bloggrify dependency ([dc81cf4](https://github.com/bloggrify/bloggrify-mistral/commit/dc81cf4))
+- Remove configuration that is now useless ([f3a474f](https://github.com/bloggrify/bloggrify-mistral/commit/f3a474f))
+- Upgrade dependency ([6df0cd5](https://github.com/bloggrify/bloggrify-mistral/commit/6df0cd5))
+
+### ❤️ Contributors
+
+- Hlassiege <hlassiege@gmail.com>
+
 ## v1.2.0
 
 [compare changes](https://github.com/bloggrify/bloggrify-mistral/compare/v1.1.0...v1.2.0)

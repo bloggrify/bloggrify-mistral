@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v1.2.2
+
+[compare changes](https://github.com/bloggrify/bloggrify-mistral/compare/v1.2.1...v1.2.2)
+
+### 🏡 Chore
+
+- **release:** V1.2.1 ([57b9429](https://github.com/bloggrify/bloggrify-mistral/commit/57b9429))
+- Upgrade dependency ([0cd3161](https://github.com/bloggrify/bloggrify-mistral/commit/0cd3161))
+- Upgrade dependency ([6d66b84](https://github.com/bloggrify/bloggrify-mistral/commit/6d66b84))
+- Update dependencies ([ebb2e9a](https://github.com/bloggrify/bloggrify-mistral/commit/ebb2e9a))
+
+### ❤️ Contributors
+
+- Hugo Lassiège <hugo@malt.com>
+- Hlassiege <hlassiege@gmail.com>
+
 ## v1.2.1
 
 [compare changes](https://github.com/bloggrify/bloggrify-mistral/compare/v1.2.0...v1.2.1)

@@ -2,7 +2,7 @@
     "name": "@bloggrify/mistral",
     "description": "A Nuxt.js theme for Bloggrify",
     "license": "All Rights Reserved",
-    "version": "1.2.1",
+    "version": "1.2.2",
     "author": "Eventually Coding <contact@eventuallycoding.com>",
     "type": "module",
     "main": "./nuxt.config.ts",

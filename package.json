@@ -26,13 +26,13 @@
         "lint": "eslint ."
     },
     "dependencies": {
-        "@bloggrify/core": "1.4.1",
-        "nuxt": "3.11.2"
+        "@bloggrify/core": "1.7.0",
+        "nuxt": "3.14.1592"
     },
     "devDependencies": {
-        "@nuxt/eslint-config": "^0.2.0",
-        "autoprefixer": "10.4.17",
-        "eslint": "8.56.0",
-        "sass": "1.70.0"
+        "@nuxt/eslint-config": "^0.7.1",
+        "autoprefixer": "10.4.20",
+        "eslint": "^8.57.1",
+        "sass": "1.81.0"
     }
 }

@@ -26,7 +26,7 @@
         "lint": "eslint ."
     },
     "dependencies": {
-        "@bloggrify/core": "1.7.0",
+        "@bloggrify/core": "1.8.0",
         "nuxt": "3.14.1592"
     },
     "devDependencies": {

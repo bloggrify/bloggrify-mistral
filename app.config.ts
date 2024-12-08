@@ -13,13 +13,13 @@ export default defineAppConfig({
         'lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.',
 
     socials: {
-        twitter: 'https://twitter.com',
-        mastodon: 'https://piaille.fr',
-        youtube: 'https://youtube.com',
-        linkedin: 'https://linkedin.com',
-        facebook: 'https://facebook.com',
-        instagram: 'https://instagram.com',
-        github: 'https://github.com',
+        // twitter: 'https://twitter.com',
+        // mastodon: 'https://piaille.fr',
+        // youtube: 'https://youtube.com',
+        // linkedin: 'https://linkedin.com',
+        // facebook: 'https://facebook.com',
+        // instagram: 'https://instagram.com',
+        // github: 'https://github.com',
     },
 
     newsletter: {

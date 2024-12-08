@@ -183,7 +183,7 @@
             </div>
 
             <div
-                class="flex mb-2 space-x-2 text-sm text-gray-500 dark:text-gray-400"
+                class="flex mb-2 space-x-2 text-sm text-gray-600"
             >
                 <div>Copyright © {{ new Date().getFullYear() }}</div>
                 <div>•</div>

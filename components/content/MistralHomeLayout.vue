@@ -3,6 +3,13 @@
         <div class="mx-auto max-w-[1330px] md:p-4">
             <div class="grid grid-cols-3 md:gap-4">
                 <div class="col-span-3 lg:col-span-2 md:p-4">
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-700 mb-8 ml-4">
+                            Latest Posts
+                        </h1>
+                        <slot />
+                    </div>
+
                     <slot name="posts" />
                 </div>
                 <div

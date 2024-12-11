@@ -50,7 +50,7 @@
                 <NuxtImg
                     :src="author.avatar"
                     loading="lazy"
-                    alt=""
+                    :alt="`Avatar of ${author.name}`"
                     class="mr-3 w-10 h-10 rounded-full bg-slate-50"
                 />
                 <div>

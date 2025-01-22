@@ -31,7 +31,7 @@ export default defineAppConfig({
     comments: {
         enabled: true,
         hyvor_talk: {
-            website_id: '10519', // Replace with your Hyvor Talk website ID (it won't work with this one)
+            website_id: process.env.HYVOR_ID,
         },
     },
 

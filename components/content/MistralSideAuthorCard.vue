@@ -1,6 +1,7 @@
 <template>
     <div class="w-[110px] h-[110px] border border-gray-300 rounded-full flex items-center justify-center p-1">
         <NuxtImg
+            v-if="author.avatar"
             :src="author.avatar"
             :alt="author.name"
             class="rounded-full border border-gray-300"
@@ -17,12 +18,12 @@
     <div class="mt-4">
         <div class="flex mb-3 space-x-4">
             <NuxtLink
-                v-if="author.socials.youtube"
+                v-if="author.socials?.youtube"
                 aria-label="Open Youtube profile"
                 class="text-sm text-gray-500 transition hover:text-gray-600"
                 target="_blank"
                 rel="me"
-                :to="author.socials.youtube"
+                :to="author.socials?.youtube"
             >
                 <span class="sr-only">Youtube</span>
                 <svg
@@ -37,12 +38,12 @@
                 </svg>
             </NuxtLink>
             <NuxtLink
-                v-if="author.socials.mastodon"
+                v-if="author.socials?.mastodon"
                 aria-label="Open Mastodon profile"
                 class="text-sm text-gray-500 transition hover:text-gray-600"
                 rel="me"
                 target="_blank"
-                :to="author.socials.mastodon"
+                :to="author.socials?.mastodon"
             >
                 <span class="sr-only">Mastodon</span>
                 <svg
@@ -57,12 +58,12 @@
                 </svg>
             </NuxtLink>
             <NuxtLink
-                v-if="author.socials.github"
+                v-if="author.socials?.github"
                 aria-label="Open github profile"
                 class="text-sm text-gray-500 transition hover:text-gray-600"
                 target="_blank"
                 rel="nofollow noopener noreferrer"
-                :to="author.socials.github"
+                :to="author.socials?.github"
             >
                 <span class="sr-only">github</span>
                 <svg
@@ -77,12 +78,12 @@
                 </svg>
             </NuxtLink>
             <NuxtLink
-                v-if="author.socials.facebook"
+                v-if="author.socials?.facebook"
                 aria-label="Open Facebook profile"
                 class="text-sm text-gray-500 transition hover:text-gray-600"
                 target="_blank"
                 rel="noopener noreferrer"
-                :to="author.socials.facebook"
+                :to="author.socials?.facebook"
             >
                 <span class="sr-only">Facebook</span>
                 <svg
@@ -97,12 +98,12 @@
                 </svg>
             </NuxtLink>
             <NuxtLink
-                v-if="author.socials.linkedin"
+                v-if="author.socials?.linkedin"
                 aria-label="Open linkedin profile"
                 class="text-sm text-gray-500 transition hover:text-gray-600"
                 target="_blank"
                 rel="noopener noreferrer"
-                :to="author.socials.linkedin"
+                :to="author.socials?.linkedin"
             >
                 <span class="sr-only">Linkedin</span>
                 <svg
@@ -117,11 +118,11 @@
                 </svg>
             </NuxtLink>
             <NuxtLink
-                v-if="author.socials.twitter"
+                v-if="author.socials?.twitter"
                 aria-label="Open twitter profile"
                 target="_blank"
                 rel="nofollow noopener noreferrer"
-                :to="author.socials.twitter"
+                :to="author.socials?.twitter"
                 class="text-gray-500 transition hover:text-gray-600"
             >
                 <svg

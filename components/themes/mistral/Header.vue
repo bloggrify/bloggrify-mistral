@@ -90,7 +90,7 @@
                         <div
                             class="hidden sm:block sm:ml-6 absolute right-0 font-mark"
                         >
-                            <div class="flex space-x-4">
+                            <div class="flex space-x-4 items-center">
                                 <AppSearch />
                                 <NuxtLink
                                     v-for="item in menu"
@@ -112,7 +112,7 @@
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 448 512"
-                                        class="transition-transform hover:scale-110 w-6 h-6 mt-2"
+                                        class="transition-transform hover:scale-110 w-6 h-6"
                                     >
                                         <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                                         <path
@@ -168,7 +168,7 @@
 <script setup lang="ts">
 const config = useAppConfig()
 const menu = config.menu
-const blogName = config.name
+const blogName = config.name || 'Mistral'
 
 const mobileMenuOpen = ref(false)
 </script>

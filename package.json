@@ -19,6 +19,7 @@
         "tailwind.config.js"
     ],
     "scripts": {
+        "preinstall": "npx playwright install",
         "build": "nuxt build",
         "dev": "nuxt dev",
         "generate": "nuxt generate",
@@ -26,10 +27,11 @@
         "lint": "eslint ."
     },
     "dependencies": {
-        "@bloggrify/core": "1.8.0",
+        "@bloggrify/core": "2.0.0-beta.1",
         "nuxt": "3.14.1592"
     },
     "devDependencies": {
+        "@playwright/test": "^1.45.1",
         "@nuxt/eslint-config": "^0.7.1",
         "autoprefixer": "10.4.20",
         "eslint": "^8.57.1",

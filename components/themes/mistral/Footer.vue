@@ -27,12 +27,12 @@
                 <div class="flex flex-col items-start mt-6">
                     <div class="flex mb-3 space-x-4">
                         <NuxtLink
-                            v-if="config.socials.youtube"
+                            v-if="config.socials?.youtube"
                             aria-label="Open Youtube profile"
                             class="text-sm text-gray-500 transition hover:text-gray-600"
                             target="_blank"
                             rel="me"
-                            :to="config.socials.youtube"
+                            :to="config.socials?.youtube"
                         >
                             <span class="sr-only">Youtube</span>
                             <svg
@@ -47,12 +47,12 @@
                             </svg>
                         </NuxtLink>
                         <NuxtLink
-                            v-if="config.socials.mastodon"
+                            v-if="config.socials?.mastodon"
                             aria-label="Open Mastodon profile"
                             class="text-sm text-gray-500 transition hover:text-gray-600"
                             target="_blank"
                             rel="me"
-                            :to="config.socials.mastodon"
+                            :to="config.socials?.mastodon"
                         >
                             <span class="sr-only">Mastodon</span>
                             <svg
@@ -67,12 +67,12 @@
                             </svg>
                         </NuxtLink>
                         <NuxtLink
-                            v-if="config.socials.github"
+                            v-if="config.socials?.github"
                             aria-label="Open github profile"
                             class="text-sm text-gray-500 transition hover:text-gray-600"
                             target="_blank"
                             rel="nofollow noopener noreferrer"
-                            :to="config.socials.github"
+                            :to="config.socials?.github"
                         >
                             <span class="sr-only">github</span>
                             <svg
@@ -87,12 +87,12 @@
                             </svg>
                         </NuxtLink>
                         <NuxtLink
-                            v-if="config.socials.facebook"
+                            v-if="config.socials?.facebook"
                             aria-label="Open Facebook profile"
                             class="text-sm text-gray-500 transition hover:text-gray-600"
                             target="_blank"
                             rel="noopener noreferrer"
-                            :to="config.socials.facebook"
+                            :to="config.socials?.facebook"
                         >
                             <span class="sr-only">Facebook</span>
                             <svg
@@ -107,12 +107,12 @@
                             </svg>
                         </NuxtLink>
                         <NuxtLink
-                            v-if="config.socials.linkedin"
+                            v-if="config.socials?.linkedin"
                             aria-label="Open linkedin profile"
                             class="text-sm text-gray-500 transition hover:text-gray-600"
                             target="_blank"
                             rel="noopener noreferrer"
-                            :to="config.socials.linkedin"
+                            :to="config.socials?.linkedin"
                         >
                             <span class="sr-only">Linkedin</span>
                             <svg
@@ -127,11 +127,11 @@
                             </svg>
                         </NuxtLink>
                         <NuxtLink
-                            v-if="config.socials.twitter"
+                            v-if="config.socials?.twitter"
                             aria-label="Open twitter profile"
                             target="_blank"
                             rel="nofollow noopener noreferrer"
-                            :to="config.socials.twitter"
+                            :to="config.socials?.twitter"
                             class="text-gray-500 transition hover:text-gray-600"
                         >
                             <svg
@@ -201,9 +201,9 @@ import consola from 'consola'
 
 const config = useAppConfig()
 const menu = config.menu
-const newsletterEnabled = config.newsletter.enabled
-const formAction = config.newsletter.form_action
-const provider = config.newsletter.provider
+const newsletterEnabled = config.newsletter?.enabled
+const formAction = config.newsletter?.form_action
+const provider = config.newsletter?.provider
 const email = ref('')
 const success = ref(false)
 const error = ref(false)

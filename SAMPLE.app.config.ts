@@ -13,15 +13,16 @@ export default defineAppConfig({
         'lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.',
 
     socials: {
-        // twitter: 'https://twitter.com',
-        // mastodon: 'https://piaille.fr',
-        // youtube: 'https://youtube.com',
-        // linkedin: 'https://linkedin.com',
-        // facebook: 'https://facebook.com',
-        // instagram: 'https://instagram.com',
-        // github: 'https://github.com',
-    },
+        mastodon: 'https://piaille.fr',
+        youtube: 'https://youtube.com',
+        linkedin: 'https://linkedin.com',
+        facebook: 'https://facebook.com',
+        instagram: 'https://instagram.com',
+        github: 'https://github.com',
 
+        // possible values, see https://github.com/stefanobartoletti/nuxt-social-share
+        sharing_networks: ['facebook', 'bluesky', 'linkedin', 'email', 'pinterest', 'reddit', 'pocket', 'whatsapp', 'telegram', 'skype']
+    },
     newsletter: {
         enabled: true,
         form_action: 'YOUR_NEWSLETTER_FORM_ACTION',

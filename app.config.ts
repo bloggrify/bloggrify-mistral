@@ -8,7 +8,7 @@ export default defineAppConfig({
 
     // The name of the blog itself
     name: 'Bloggrify',
-    avatar: 'https://eventuallycoding.com/hugo-nb.jpg',
+    avatar: '/images/avatar.jpg',
     // The description of the blog if any
     description:
         'This is the official blog of Bloggrify and it serves as a demo for the Mistral theme.',
@@ -50,7 +50,7 @@ export default defineAppConfig({
             default: true,
             description:
                 'Author and maintainer of Bloggrify',
-            avatar: 'https://eventuallycoding.com/hugo-nb.jpg',
+            avatar: '/images/avatar.jpg',
             socials: {
                 bluesky: 'https://bluesky',
                 mastodon: 'https://piaille.fr',

@@ -8,7 +8,7 @@ export default defineAppConfig({
 
     // The name of the blog itself
     name: 'Bloggrify',
-    avatar: '/images/avatar.jpg',
+    avatar: 'https://eventuallycoding.com/hugo-nb.jpg',
     // The description of the blog if any
     description:
         'lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.',
@@ -45,12 +45,12 @@ export default defineAppConfig({
     // and the mistral theme use the default author for the main page
     authors: [
         {
-            username: 'john-doe',
-            name: 'John Doe',
+            username: 'hlassiege',
+            name: 'Hugo',
             default: true,
             description:
-                'lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.',
-            avatar: '/images/avatar.jpg',
+                'Author and maintainer of Bloggrify',
+            avatar: 'https://eventuallycoding.com/hugo-nb.jpg',
             socials: {
                 bluesky: 'https://bluesky',
                 mastodon: 'https://piaille.fr',

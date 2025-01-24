@@ -1,6 +1,48 @@
 # Changelog
 
 
+## v1.3.0
+
+[compare changes](https://github.com/bloggrify/bloggrify-mistral/compare/v1.2.3...v1.3.0)
+
+### 🚀 Enhancements
+
+- Upgrade to bloggrify 2.0.0-beta1 ([c359310](https://github.com/bloggrify/bloggrify-mistral/commit/c359310))
+
+### 🩹 Fixes
+
+- Issue #3 Insufficient contrast ratio in the footer ([#3](https://github.com/bloggrify/bloggrify-mistral/issues/3))
+- We should not have default values for social networks. Otherwise, everyone has to override the value to not display it. ([4dde78b](https://github.com/bloggrify/bloggrify-mistral/commit/4dde78b))
+- Issue #5 add alt attribute to the author avatar ([#5](https://github.com/bloggrify/bloggrify-mistral/issues/5))
+- Issue #4 add h1 title on archive and home layout ([#4](https://github.com/bloggrify/bloggrify-mistral/issues/4))
+- Add missing image to the blog ([805f695](https://github.com/bloggrify/bloggrify-mistral/commit/805f695))
+- Remove irrelevant path with this new blog content ([ab629c9](https://github.com/bloggrify/bloggrify-mistral/commit/ab629c9))
+- Author image ([64764bf](https://github.com/bloggrify/bloggrify-mistral/commit/64764bf))
+
+### 💅 Refactors
+
+- Improve the author side card and warn users if they try to use a platform not supported. Add Bluesky ([1abec45](https://github.com/bloggrify/bloggrify-mistral/commit/1abec45))
+- Use common blog content with a git submodule ([9953518](https://github.com/bloggrify/bloggrify-mistral/commit/9953518))
+- App.config.ts is not included anymore in the final package. So we don't need to use the build trick ([7dce43b](https://github.com/bloggrify/bloggrify-mistral/commit/7dce43b))
+- Adapt the templates to the new version of bloggrify ([f73cc2a](https://github.com/bloggrify/bloggrify-mistral/commit/f73cc2a))
+- Simplify footer template and use general composable for newsletter subscription ([b987c97](https://github.com/bloggrify/bloggrify-mistral/commit/b987c97))
+
+### 📖 Documentation
+
+- Change the default description to be more relevant ([dcb87c8](https://github.com/bloggrify/bloggrify-mistral/commit/dcb87c8))
+
+### 🏡 Chore
+
+- Update app.config.ts for the demo environment ([adc9b51](https://github.com/bloggrify/bloggrify-mistral/commit/adc9b51))
+- Revert last commit ([14b20e6](https://github.com/bloggrify/bloggrify-mistral/commit/14b20e6))
+- Update demo config file to show sharing capabilities ([7451120](https://github.com/bloggrify/bloggrify-mistral/commit/7451120))
+- Update dependency to bloggrify core ([1462f16](https://github.com/bloggrify/bloggrify-mistral/commit/1462f16))
+- Update dependency to bloggrify core 2.0.0 ([3c93956](https://github.com/bloggrify/bloggrify-mistral/commit/3c93956))
+
+### ❤️ Contributors
+
+- Hugo Lassiège <hlassiege@gmail.com>
+
 ## v1.2.3
 
 [compare changes](https://github.com/bloggrify/bloggrify-mistral/compare/v1.2.1...v1.2.3)

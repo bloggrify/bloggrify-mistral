@@ -1,5 +1,5 @@
 <template>
-    <Header />
+    <MistralHeader />
     <main>
         <div v-if="doc">
             <div
@@ -49,14 +49,14 @@
             </div>
         </div>
     </main>
-    <Footer />
+    <MistralFooter />
 </template>
 <script setup lang="ts">
-import Header from '~/components/themes/mistral/Header.vue'
-import Footer from '~/components/themes/mistral/Footer.vue'
 import ArticleHeader from '~/components/themes/mistral/ArticleHeader.vue'
 import ShareSection from '~/components/themes/mistral/ShareSection.vue'
 import PageSidebar from '~/components/themes/mistral/PageSidebar.vue'
+import MistralHeader from '~/components/themes/mistral/MistralHeader.vue'
+import MistralFooter from '~/components/themes/mistral/MistralFooter.vue'
 
 const props = defineProps<{
     doc: any;

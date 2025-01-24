@@ -15,7 +15,7 @@
                             v-if="shouldDisplayYear(list, article.date, index)"
                             class="mb-4"
                         >
-                            <span class="text-4xl font-bold">{{
+                            <span class="text-3xl font-bold">{{
                                 getYear(article.date)
                             }}</span>
                         </div>

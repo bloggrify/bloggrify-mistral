@@ -14,7 +14,6 @@
         "components",
         "composables",
         "layouts",
-        "app.config.ts",
         "nuxt.config.ts",
         "tailwind.config.js"
     ],

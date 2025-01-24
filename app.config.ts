@@ -1,6 +1,7 @@
 export default defineAppConfig({
     logo: '/images/logo.svg',
 
+    // FIXME : remove when updated to the latest version of Bloggrify
     url: 'https://mistral.bloggrify.com/',
 
     theme: 'mistral',

@@ -21,4 +21,5 @@
 <script setup lang="ts">
 import MistralHeader from '~/components/themes/mistral/MistralHeader.vue'
 import MistralFooter from '~/components/themes/mistral/MistralFooter.vue'
+import MistralFullListOfPosts from '~/components/content/MistralFullListOfPosts.vue'
 </script>

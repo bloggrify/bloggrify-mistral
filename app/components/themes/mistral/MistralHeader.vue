@@ -96,7 +96,7 @@
                                     v-for="item in menu"
                                     :key="item.path"
                                     :to="item.path"
-                                    class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium font-to-invert-to-black"
+                                    class="text-white bg-gray-700 hover:bg-gray-900 hover:text-white px-3 py-2 rounded-md text-base font-medium font-to-invert-to-black"
                                 >
                                     {{ item.name }}
                                 </NuxtLink>
@@ -134,7 +134,7 @@
                         v-for="item in menu"
                         :key="item.path"
                         :to="item.path"
-                        class="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium font-to-invert-to-black"
+                        class="text-gray-600 hover:bg-gray-900 hover:text-white block px-3 py-2 rounded-md text-base font-medium font-to-invert-to-black"
                     >
                         {{ item.name }}
                     </NuxtLink>

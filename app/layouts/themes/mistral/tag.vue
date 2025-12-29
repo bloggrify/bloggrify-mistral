@@ -13,8 +13,6 @@
     <MistralFooter />
 </template>
 <script setup lang="ts">
-import Header from '~/components/themes/mistral/Header.vue'
-import Footer from '~/components/themes/mistral/Footer.vue'
 import MistralHeader from '~/components/themes/mistral/MistralHeader.vue'
 import MistralFooter from '~/components/themes/mistral/MistralFooter.vue'
 defineProps<{

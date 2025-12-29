@@ -36,7 +36,11 @@
                 </div>
 
                 <div class="flex items-center justify-center mb-6">
-                    <NuxtLink v-for="tag in doc.tags" :key="tag" :to="`/tags/${tag}`" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mx-2">
+                    <NuxtLink
+v-for="tag in doc.tags"
+:key="tag"
+:to="`/tags/${tag}`"
+class="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mx-2">
                         {{ tag }}
                     </NuxtLink>
                 </div>
@@ -57,9 +61,10 @@ import ShareSection from '~/components/themes/mistral/ShareSection.vue'
 import PageSidebar from '~/components/themes/mistral/PageSidebar.vue'
 import MistralHeader from '~/components/themes/mistral/MistralHeader.vue'
 import MistralFooter from '~/components/themes/mistral/MistralFooter.vue'
+import type {PageCollectionItem} from "@nuxt/content";
 
 const props = defineProps<{
-    doc: any;
+    doc: PageCollectionItem
 }>()
 
 const config = useAppConfig()

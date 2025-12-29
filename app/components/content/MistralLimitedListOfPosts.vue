@@ -1,13 +1,8 @@
 <template>
-    <ContentList :query="query">
-        <template #not-found>
-            <p>No posts found.</p>
-        </template>
-        <template #default="{ list }">
             <div class="space-y-8">
                 <div
-                    v-for="article in list"
-                    :key="article._path"
+                    v-for="article in docs"
+                    :key="article.path"
                     class="flex flex-col"
                 >
                     <div class="grid grid-cols-3 gap-4">
@@ -15,7 +10,7 @@
                             class="col-span-2 p-4"
                             :class="article.cover ? 'col-span-2' : 'col-span-3'"
                         >
-                            <NuxtLink :to="article._path">
+                            <NuxtLink :to="article.path">
                                 <h2 class="text-3xl font-bold mb-2">
                                     {{ article.title }}
                                 </h2>
@@ -46,7 +41,7 @@
                             v-if="article.cover"
                             class="col-span-1 p-4 flex justify-center items-center"
                         >
-                            <NuxtLink :to="article._path" class="w-full">
+                            <NuxtLink :to="article.path" class="w-full">
                                 <NuxtImg
                                     :src="'/images/' + article.cover"
                                     :alt="article.title"
@@ -59,7 +54,7 @@
                             </NuxtLink>
                         </div>
                     </div>
-                    <hr>
+                    <USeparator />
                 </div>
 
                 <div class="flex items-center justify-center mt-10">
@@ -68,21 +63,38 @@
                     </NuxtLink>
                 </div>
             </div>
-        </template>
-    </ContentList>
 </template>
 <script setup lang="ts">
-const query = {
-    path: '',
-    where: [{ hidden: { $ne: true }, listed: { $ne: false } }],
-    limit: 10,
-    sort: [{ date: -1 }],
-}
+import type { PageCollectionItem } from '@nuxt/content'
 
-function desc(article: any): string {
+function desc(article: PageCollectionItem): string {
     return (
-        article.description.slice(0, 200) + '...' ||
-        article.body.slice(0, 200) + '...'
+        article.description?.slice(0, 200) + '...' || ''
     )
 }
+
+const {itemsPerPage, currentPage} = usePagination()
+
+// Helper function to build the base query with all filters
+const buildQuery = () => {
+    let query = queryCollection('page')
+
+    // Filtres de visibilité
+    query = query
+        .orWhere(query => query.where('listed', '=', true).where('listed', 'IS NULL'))
+        .orWhere(query => query.where('hidden', '=', false).where('hidden', 'IS NULL'))
+        .orWhere(query => query.where('draft', '=', false).where('draft', 'IS NULL'))
+
+    return query
+}
+
+const numberOfPostsPerPage = itemsPerPage.value
+
+const { data: docs } = useAsyncData("mistral-limited-list", () => {
+    return buildQuery()
+        .order('date', 'DESC')
+        .skip((currentPage.value - 1) * numberOfPostsPerPage)
+        .limit(numberOfPostsPerPage)
+        .all()
+})
 </script>

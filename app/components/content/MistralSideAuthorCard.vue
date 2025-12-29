@@ -24,8 +24,6 @@
 <script setup lang="ts">
 import {findAuthor} from '#imports'
 
-const config = useAppConfig()
-
 const author = findAuthor()
 
 </script>

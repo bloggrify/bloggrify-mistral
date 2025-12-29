@@ -1,6 +1,33 @@
 # Changelog
 
 
+## v3.0.0
+
+[compare changes](https://github.com/bloggrify/bloggrify-mistral/compare/v1.3.0...v3.0.0)
+
+### 🩹 Fixes
+
+- App.config.ts should be empty ([22fd396](https://github.com/bloggrify/bloggrify-mistral/commit/22fd396))
+- Upgrade to last version that should work ([f51cb83](https://github.com/bloggrify/bloggrify-mistral/commit/f51cb83))
+- Storage zone password is wrong ([33c35f7](https://github.com/bloggrify/bloggrify-mistral/commit/33c35f7))
+- Restore content folder from git ([4cfdb47](https://github.com/bloggrify/bloggrify-mistral/commit/4cfdb47))
+
+### 🏡 Chore
+
+- **release:** V1.3.0 ([e685937](https://github.com/bloggrify/bloggrify-mistral/commit/e685937))
+- Update general content ([67bd560](https://github.com/bloggrify/bloggrify-mistral/commit/67bd560))
+- Update general content ([11cdc34](https://github.com/bloggrify/bloggrify-mistral/commit/11cdc34))
+- Big update for use last version of docus and nuxt ([54d01a1](https://github.com/bloggrify/bloggrify-mistral/commit/54d01a1))
+- Upgrade to bloggrify 3.x ([dcfa73b](https://github.com/bloggrify/bloggrify-mistral/commit/dcfa73b))
+- Upgrade to bloggrify 3.x ([a260b76](https://github.com/bloggrify/bloggrify-mistral/commit/a260b76))
+- Automate deployment on bunny ([79d9a12](https://github.com/bloggrify/bloggrify-mistral/commit/79d9a12))
+- Fix eslint ([a1fbda8](https://github.com/bloggrify/bloggrify-mistral/commit/a1fbda8))
+
+### ❤️ Contributors
+
+- Hlassiege <hlassiege@gmail.com>
+- Hugo Lassiège <hlassiege@gmail.com>
+
 ## v1.3.0
 
 [compare changes](https://github.com/bloggrify/bloggrify-mistral/compare/v1.2.3...v1.3.0)

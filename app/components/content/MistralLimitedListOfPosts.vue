@@ -73,28 +73,9 @@ function desc(article: PageCollectionItem): string {
     )
 }
 
-const {itemsPerPage, currentPage} = usePagination()
-
-// Helper function to build the base query with all filters
-const buildQuery = () => {
-    let query = queryCollection('page')
-
-    // Filtres de visibilité
-    query = query
-        .orWhere(query => query.where('listed', '=', true).where('listed', 'IS NULL'))
-        .orWhere(query => query.where('hidden', '=', false).where('hidden', 'IS NULL'))
-        .orWhere(query => query.where('draft', '=', false).where('draft', 'IS NULL'))
-
-    return query
-}
-
-const numberOfPostsPerPage = itemsPerPage.value
-
-const { data: docs } = useAsyncData("mistral-limited-list", () => {
-    return buildQuery()
-        .order('date', 'DESC')
-        .skip((currentPage.value - 1) * numberOfPostsPerPage)
-        .limit(numberOfPostsPerPage)
-        .all()
+// Use the composable to fetch content with pagination
+const { docs } = await useContentListing({
+    paginated: true,
+    key: 'mistral-limited-list'
 })
 </script>

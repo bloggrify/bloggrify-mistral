@@ -31,23 +31,10 @@
     </main>
 </template>
 <script setup lang="ts">
-const buildQuery = () => {
-    let query = queryCollection('page')
-
-    // Filtres de visibilité
-    query = query
-        .orWhere(query => query.where('listed', '=', true).where('listed', 'IS NULL'))
-        .orWhere(query => query.where('hidden', '=', false).where('hidden', 'IS NULL'))
-        .orWhere(query => query.where('draft', '=', false).where('draft', 'IS NULL'))
-
-    return query
-}
-
-
-const { data: docs } = useAsyncData("mistral-limited-list", () => {
-    return buildQuery()
-        .order('date', 'DESC')
-        .all()
+// Use the composable to fetch all content without pagination
+const { docs } = await useContentListing({
+    paginated: false,
+    key: 'mistral-full-list'
 })
 
 function getYear(date) {

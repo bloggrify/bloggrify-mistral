@@ -11,14 +11,13 @@
         "url": "https://github.com/bloggrify/bloggrify-mistral.git"
     },
     "files": [
-        "components",
-        "composables",
-        "layouts",
-        "nuxt.config.ts",
-        "tailwind.config.js"
+        "app",
+        "!app/app.config.ts",
+        "nuxt.config.ts"
     ],
     "scripts": {
         "preinstall": "npx playwright install",
+        "prepare": "nuxt prepare",
         "build": "nuxt build",
         "dev": "nuxt dev",
         "generate": "nuxt generate",

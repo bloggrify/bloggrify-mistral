@@ -41,7 +41,7 @@ jobs:
                 access-key: ${{ secrets.BUNNY_ACCESS_KEY }}
                 directory-to-upload: ".output/public"  # Nuxt 3
                 storage-endpoint: "https://storage.bunnycdn.com"
-                storage-zone-name: "bloggrify"
+                storage-zone-name: "bloggrify-mistral"
                 storage-zone-password: ${{ secrets.BUNNY_STORAGE_ZONE_PASSWORD }}
                 enable-delete-action: true
                 enable-purge-pull-zone: true

@@ -44,7 +44,11 @@
                     You have successfully subscribed
                 </p>
 
-                <form ref="subscribeForm" :action="formAction" method="post" target="_blank">
+                <form
+                    ref="subscribeForm"
+                    :action="formAction"
+                    method="post"
+                    target="_blank">
                     <input
                         v-model="email"
                         name="email"

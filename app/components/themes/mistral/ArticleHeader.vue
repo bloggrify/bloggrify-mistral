@@ -63,8 +63,10 @@
     </div>
 </template>
 <script setup lang="ts">
+import type {PageCollectionItem} from "@nuxt/content";
+
 const props = defineProps<{
-    article: any;
+    article: PageCollectionItem;
 }>()
 
 const author = findAuthor(props.article.author)

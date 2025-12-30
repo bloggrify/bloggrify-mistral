@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v3.0.1
+
+[compare changes](https://github.com/bloggrify/bloggrify-mistral/compare/v3.0.0...v3.0.1)
+
+### 🏡 Chore
+
+- Upgrade content ([ee74e53](https://github.com/bloggrify/bloggrify-mistral/commit/ee74e53))
+- Upgrade to last version of bloggrify ([ee533cf](https://github.com/bloggrify/bloggrify-mistral/commit/ee533cf))
+
+### ❤️ Contributors
+
+- Hlassiege <hlassiege@gmail.com>
+
 ## v3.0.0
 
 [compare changes](https://github.com/bloggrify/bloggrify-mistral/compare/v1.3.0...v3.0.0)

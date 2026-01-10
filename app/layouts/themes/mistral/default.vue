@@ -49,7 +49,7 @@ class="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mx
 
                 <ShareSection :title="doc.title" :cover="doc.cover" />
 
-                <CommentSystem :id="doc.id" :nocomments="doc.nocomments" />
+                <CommentSystem :id="doc.pageid" :nocomments="doc.nocomments" />
             </div>
         </div>
     </main>

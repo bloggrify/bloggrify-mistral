@@ -1,6 +1,24 @@
 # Changelog
 
 
+## v3.0.2
+
+[compare changes](https://github.com/bloggrify/bloggrify-mistral/compare/v3.0.1...v3.0.2)
+
+### 🩹 Fixes
+
+- Breaking change. The id is now deprecated in version 3.x. This is now a reserved item for nuxt content ([55d9a36](https://github.com/bloggrify/bloggrify-mistral/commit/55d9a36))
+- Breaking change related to nuxt content. id is now a reserved keyword, hence we should use pageid for the comment system ([840b608](https://github.com/bloggrify/bloggrify-mistral/commit/840b608))
+- Important upgrade to last version of bloggrify ([4555604](https://github.com/bloggrify/bloggrify-mistral/commit/4555604))
+
+### 🏡 Chore
+
+- Update git submodule remote ([702fa31](https://github.com/bloggrify/bloggrify-mistral/commit/702fa31))
+
+### ❤️ Contributors
+
+- Hlassiege <hlassiege@gmail.com>
+
 ## v3.0.1
 
 [compare changes](https://github.com/bloggrify/bloggrify-mistral/compare/v3.0.0...v3.0.1)

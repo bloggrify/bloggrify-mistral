@@ -48,13 +48,21 @@
                 class="flex items-center font-medium sm:mx-3 justify-center"
             >
                 <NuxtImg
+                    v-if="author.avatar"
                     :src="author.avatar"
                     loading="lazy"
                     :alt="`Avatar of ${author.name}`"
                     class="mr-3 w-10 h-10 rounded-full bg-slate-50"
                 />
                 <div>
-                    <div class="font-bold text-slate-500 text-xs">
+                    <NuxtLink
+                        v-if="author.username"
+                        :to="`/authors/${author.username}`"
+                        class="font-bold text-slate-500 text-xs hover:underline"
+                    >
+                        {{ author.name }}
+                    </NuxtLink>
+                    <div v-else class="font-bold text-slate-500 text-xs">
                         {{ author.name }}
                     </div>
                 </div>

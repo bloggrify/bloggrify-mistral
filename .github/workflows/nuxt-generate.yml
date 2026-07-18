@@ -35,6 +35,11 @@ jobs:
             - name: Generate static site
               run: npm run generate
 
+            - name: Wire the generated 404 page to Bunny's error path
+              run: |
+                  mkdir -p .output/public/bunnycdn_errors
+                  cp .output/public/404.html .output/public/bunnycdn_errors/404.html
+
             - name: Deploy to Bunny
               uses: R-J-dev/bunny-deploy@v2.1.1
               with:
@@ -45,7 +50,7 @@ jobs:
                 storage-zone-password: ${{ secrets.BUNNY_STORAGE_ZONE_PASSWORD }}
                 enable-delete-action: true
                 enable-purge-pull-zone: true
-                pull-zone-id: "5063091"
+                pull-zone-id: "5074639"
                 concurrency: 50
                 replication-timeout: "15000"
                 request-timeout: "5000" # optional, defaults to 5000

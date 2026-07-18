@@ -39,13 +39,9 @@
     <MistralFooter />
 </template>
 <script setup lang="ts">
+import type { Author } from '@nuxt/schema'
 import MistralHeader from '~/components/themes/mistral/MistralHeader.vue'
 import MistralFooter from '~/components/themes/mistral/MistralFooter.vue'
-
-// Derived from core's `findAuthor` rather than imported from `@nuxt/schema`: the core module
-// only propagates its type augmentation to consuming themes from the version that follows
-// 3.1.2, so naming `Author` directly does not typecheck here yet.
-type Author = NonNullable<ReturnType<typeof findAuthor>>
 
 defineProps<{
     author: Author;

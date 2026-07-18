@@ -1,7 +1,8 @@
 export default defineAppConfig({
     logo: '/images/logo.svg',
 
-    // FIXME : remove when updated to the latest version of Bloggrify
+    // Source of truth for the public URL since core 3.2: drives canonical, og:url,
+    // sitemap and RSS, and takes precedence over BASE_URL.
     url: 'https://mistral.bloggrify.com/',
 
     theme: 'mistral',

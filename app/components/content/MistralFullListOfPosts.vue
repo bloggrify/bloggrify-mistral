@@ -31,19 +31,25 @@
     </main>
 </template>
 <script setup lang="ts">
+import type { PageCollectionItem } from '@nuxt/content'
+
 // Use the composable to fetch all content without pagination
 const { docs } = await useContentListing({
     paginated: false,
     key: 'mistral-full-list'
 })
 
-function getYear(date) {
-    return new Date(date).getFullYear()
+function getYear(date: string | undefined): number | null {
+    return date ? new Date(date).getFullYear() : null
 }
 
-function shouldDisplayYear(list, date, index) {
+function shouldDisplayYear(
+    list: PageCollectionItem[] | null | undefined,
+    date: string | undefined,
+    index: number
+): boolean {
     const currentYear = getYear(date)
-    const prevYear = index > 0 ? getYear(list[index - 1].date) : null
+    const prevYear = index > 0 ? getYear(list?.[index - 1]?.date) : null
     return currentYear !== prevYear
 }
 </script>

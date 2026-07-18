@@ -22,7 +22,8 @@
         "dev": "nuxt dev",
         "generate": "nuxt generate",
         "preview": "nuxt preview",
-        "lint": "eslint ."
+        "lint": "eslint .",
+        "typecheck": "nuxt typecheck"
     },
     "dependencies": {
         "@bloggrify/core": "3.2.0",

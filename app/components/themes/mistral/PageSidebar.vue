@@ -53,11 +53,12 @@
 </template>
 
 <script setup lang="ts">
+import type { TocLink } from "@nuxt/content";
 import FilterDropdown from "~/components/themes/mistral/Dropdown.vue";
-defineProps({
-    toc: {
-        type: Array,
-        default: () => [],
-    },
+
+withDefaults(defineProps<{
+    toc?: TocLink[];
+}>(), {
+    toc: () => [],
 });
 </script>

@@ -22,7 +22,7 @@
                                         ∙
                                     </span>
                                     <span class="text-sm text-gray-500">{{
-                                        article.readingTime.text
+                                        article.readingTime?.text
                                     }}</span>
                                 </div>
                             </NuxtLink>

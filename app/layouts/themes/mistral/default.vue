@@ -13,13 +13,13 @@
                     placeholder
                 />
             </div>
-            <div class="px-4 mx-auto sm:px-6 xl:max-w-7xl xl:px-0 mt-10">
+            <div class="px-4 mx-auto sm:px-6 xl:max-w-7xl xl:px-0 mt-10 pb-16">
                 <ArticleHeader :article="doc" />
 
                 <div class="text-left mx-auto">
                     <div class="flex flex-wrap lg:flex-row-reverse py-12">
                         <div v-if="isTocEnabled" class="w-full lg:w-1/4 px-5">
-                            <PageSidebar :toc="doc.body.toc.links" />
+                            <PageSidebar :toc="doc.body.toc?.links ?? []" />
                         </div>
 
                         <div
@@ -29,7 +29,7 @@
                             <ContentRenderer
                                 id="nuxtContent"
                                 :value="doc"
-                                class="prose text-sm md:text-xl min-w-full md:p-10 mx-auto"
+                                class="prose text-sm md:text-xl min-w-full md:p-10 mx-auto [&_:where(h1,h2,h3,h4,h5,h6)_a]:no-underline"
                             />
                         </div>
                     </div>
@@ -47,7 +47,7 @@ class="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mx
 
                 <hr class="mb-8">
 
-                <ShareSection :title="doc.title" :cover="doc.cover" />
+                <ShareSection :title="doc.title ?? ''" :cover="doc.cover" class="mb-12" />
 
                 <CommentSystem :id="doc.pageid" :nocomments="doc.nocomments" />
             </div>
@@ -74,20 +74,3 @@ const isTocEnabled =
     props.doc?.body.toc?.links.length > 0 &&
     (config.table_of_contents || props.doc?.table_of_contents)
 </script>
-<style lang="scss">
-.prose {
-    a {
-        @apply underline underline-offset-2 decoration-dotted;
-    }
-
-    h1 a,
-    h2 a,
-    h3 a,
-    h4 a,
-    h5 a,
-    h6 a {
-        @apply no-underline ;
-    }
-}
-
-</style>

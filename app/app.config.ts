@@ -14,6 +14,19 @@ export default defineAppConfig({
     description:
         'This is the official blog of Bloggrify and it serves as a demo for the Mistral theme.',
 
+    // SEO, centralized in app.config since core 3.2 (takes precedence over SITE_INDEXABLE).
+    seo: {
+        // Keep this demo out of search engines (it showcases the theme, it is not
+        // meant to compete with bloggrify.com for content). Produces robots `Disallow: /`.
+        indexable: false,
+        ai: {
+            // Publish /llms.txt, a markdown index of the posts, to showcase the feature.
+            // Note: with indexable:false, robots.txt disallows every crawler anyway;
+            // llms.txt is still generated and directly fetchable.
+            llms: true,
+        },
+    },
+
     socials: {
         bluesky: 'https://bluesky',
         mastodon: 'https://piaille.fr',

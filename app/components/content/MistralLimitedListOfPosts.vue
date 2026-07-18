@@ -43,7 +43,7 @@
                         >
                             <NuxtLink :to="article.path" class="w-full">
                                 <NuxtImg
-                                    :src="'/images/' + article.cover"
+                                    :src="article.cover"
                                     :alt="article.title"
                                     class="w-full object-cover"
                                     sizes="233px sm:400px md:400px"

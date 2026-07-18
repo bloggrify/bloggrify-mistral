@@ -7,7 +7,7 @@
                 class="md:flex justify-center mt-24 hidden lg:h-[500px]"
             >
                 <NuxtImg
-                    :src="'/images/' + doc.cover"
+                    :src="doc.cover"
                     :alt="doc.title"
                     fit="cover"
                     placeholder

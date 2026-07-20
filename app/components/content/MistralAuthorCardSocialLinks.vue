@@ -7,7 +7,7 @@
             :aria-label="`Open ${link.label} profile`"
             class="text-sm text-gray-500 transition hover:text-gray-600"
             target="_blank"
-            rel="nofollow noopener noreferrer"
+            :rel="link.rel"
         >
             <span class="sr-only">{{ link.label }}</span>
             <UIcon

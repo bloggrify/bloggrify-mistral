@@ -8,3 +8,4 @@ node_modules
 .data
 .env
 dist
+/bash.exe.stackdump

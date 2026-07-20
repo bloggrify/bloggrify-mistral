@@ -27,6 +27,11 @@ export default defineAppConfig({
         },
     },
 
+    // possible values, see https://github.com/stefanobartoletti/nuxt-social-share
+    sharing: {
+        networks: ['facebook', 'bluesky', 'linkedin', 'email', 'pinterest', 'reddit', 'pocket', 'whatsapp', 'telegram', 'skype']
+    },
+
     socials: {
         bluesky: 'https://bluesky',
         mastodon: 'https://piaille.fr',
@@ -35,9 +40,6 @@ export default defineAppConfig({
         facebook: 'https://facebook.com',
         instagram: 'https://instagram.com',
         github: 'https://github.com',
-
-        // possible values, see https://github.com/stefanobartoletti/nuxt-social-share
-        sharing_networks: ['facebook', 'bluesky', 'linkedin', 'email', 'pinterest', 'reddit', 'pocket', 'whatsapp', 'telegram', 'skype']
     },
     newsletter: {
         enabled: true,

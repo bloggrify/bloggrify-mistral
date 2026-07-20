@@ -1,6 +1,25 @@
 # Changelog
 
 
+## [3.2.0](https://github.com/bloggrify/bloggrify-mistral/compare/v3.0.2...v3.2.0) (2026-07-20)
+
+
+### Features
+
+* add author page layout ([b9d4ede](https://github.com/bloggrify/bloggrify-mistral/commit/b9d4ede1ce28f053ac3b9a5093c343cb7dd04fc7))
+* add authors listing page layout ([2d5e074](https://github.com/bloggrify/bloggrify-mistral/commit/2d5e074b889860a93e3fba48022ff3969e17fdd9))
+* centralize seo config in app config (non-indexable demo, publish llms.txt) ([99a3568](https://github.com/bloggrify/bloggrify-mistral/commit/99a356844baea84188913b5e94bd267f9deabe59))
+
+
+### Bug Fixes
+
+* guard undefined author in the side author card ([c36e0fa](https://github.com/bloggrify/bloggrify-mistral/commit/c36e0fae079af14c82f35376ff9a5f0596efaff5))
+* remove heading underlines and fix share/comment spacing in article layout ([42e2c50](https://github.com/bloggrify/bloggrify-mistral/commit/42e2c502c09775ae21aa34ae22b8915251086a18))
+* resolve vue-router 5 to restore the typecheck ([55478bc](https://github.com/bloggrify/bloggrify-mistral/commit/55478bca087eeeaa9e726f84a9806902e266465e))
+* serve post covers at the content path instead of under /images ([51058bf](https://github.com/bloggrify/bloggrify-mistral/commit/51058bf93274957b95f33a70a60cfdc90265db9b))
+* upgrade to @bloggrify/core v3.2.0 ([484afa2](https://github.com/bloggrify/bloggrify-mistral/commit/484afa26fa18b7ca21f7ef0922bee2e236c95a63))
+* upgrade to @bloggrify/core v3.3.0 ([ee3a95c](https://github.com/bloggrify/bloggrify-mistral/commit/ee3a95c1440675a79213f93e2254284763de1f16))
+
 ## v3.0.2
 
 [compare changes](https://github.com/bloggrify/bloggrify-mistral/compare/v3.0.1...v3.0.2)
@@ -194,4 +213,3 @@
 ### ❤️ Contributors
 
 - Hlassiege <hlassiege@gmail.com>
-
